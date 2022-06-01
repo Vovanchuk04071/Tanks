@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-semiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'evil_empire';
+    src: url('../fonts/evil_empire/Evil Empire.otf');
+}
+
+* {
+    font-family: 'poppins-regular', sans-serif;
+}

@@ -1,0 +1,109 @@
+.earn {
+    &-row-1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &-row-2 {
+        margin: -7.5% 0 0 0;
+        display: flex;
+        align-items: flex-start;
+
+        .earn-card:nth-child(1) {
+            margin: 0 15% 0 auto;
+        }
+
+        .earn-card:nth-child(2) {
+            margin: 15% 0 0 0;
+        }
+    }
+
+    &-title {
+        font-size: 82px;
+        position: relative;
+        line-height: 0.85em;
+
+        &, * {
+            font-family: 'evil_empire', sans-serif;
+            font-style: unset;
+        }
+
+        i {
+            color: var(--dark-pink-l20);
+        }
+
+        span {
+            width: max-content;
+            position: absolute;
+            top: 82px;
+            left: -42px;
+            z-index: -1;
+            color: var(--dark-pink-bg);
+            font-size: 180px;
+            line-height: 0.85em;
+        }
+    }
+
+    &-card {
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-title {
+            font-size: 32px;
+            margin: var(--gap-md) 0 var(--gap-sm) 0;
+
+            &, * {
+                font-family: 'evil_empire', sans-serif;
+            }
+
+            span {
+                color: var(--dark-pink-l20);
+            }
+        }
+
+        &-text {
+            line-height: 1.75em;
+            font-family: 'poppins-medium', sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    @media (max-width: 620px) {
+        &-row-1 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &-row-2 {
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-card {
+            margin: var(--gap-lg) 0 0 0 !important;
+        }
+
+        &-title {
+            font-size: 64px;
+
+            br {
+                display: none;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+}

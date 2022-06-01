@@ -1,0 +1,365 @@
+.header {
+    width: 100%;
+    min-height: 56.25vw;
+    background-image: url("../images/top-sky.png");
+    position: relative;
+    background-position: 50% 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    isolation: isolate;
+    //background-color: var(--dark-black-main);
+    //z-index: 1000;
+
+    &-sky {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -5;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-city {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1120px;
+        position: absolute;
+        bottom: 15vw;
+        left: 0;
+        right: 0;
+        z-index: -4;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-arena {
+        position: absolute;
+        bottom: 2vw;
+        left: 0;
+        right: 0;
+        z-index: -3;
+
+        img {
+            width: 100%;
+        }
+
+        &-lights {
+            position: absolute;
+            bottom: 48px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &-tank {
+        position: absolute;
+        bottom: -13vw;
+        left: 0;
+        right: 0;
+        z-index: -2;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-timer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--gap-lg) 0 0 0;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &-title {
+                font-size: 58px;
+                letter-spacing: 0.065em;
+                font-family: 'evil_empire', sans-serif;
+
+                span {
+                    font-family: 'evil_empire', sans-serif;
+                    color: var(--dark-blue-l20);
+                }
+            }
+
+            &-subtitle {
+                font-family: 'poppins-medium', sans-serif;
+                font-size: 30px;
+            }
+        }
+
+        &-time {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &-date {
+                font-family: 'poppins-medium', sans-serif;
+                font-size: 18px;
+                margin: 0 0 6px 0;
+
+                span {
+                    font-family: 'poppins-medium', sans-serif;
+                }
+            }
+
+            &-units {
+                display: flex;
+            }
+
+            &-unit {
+                position: relative;
+
+                h1,
+                &Gap {
+                    font-size: 54px;
+                    line-height: 1em;
+                    font-family: 'poppins-semiBold', sans-serif;
+                }
+
+                &Gap {
+                    margin: 0 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-family: 'poppins-regular', sans-serif;
+                }
+            }
+        }
+
+        &-units {
+            width: 74px;
+        }
+
+        @media (max-width: 1020px) {
+            flex-direction: column;
+
+            &-content {
+                text-align: center;
+                align-items: center;
+                margin: 0 0 var(--gap-md) 0;
+            }
+
+            &-time {
+                align-items: center;
+            }
+        }
+    }
+
+    &-social {
+        padding: var(--gap-xs);
+        background-color: var(--dark-pink-main);
+        position: fixed;
+        top: 50%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform-origin: 100% 100%;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        &-item:not(:last-child) {
+            margin: 0 0 var(--gap-xs) 0;
+        }
+
+        .header-social-link {
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+    }
+
+    &-subscribe {
+        width: 100%;
+        max-width: 480px;
+        margin: var(--gap-lg) 0 0 auto;
+        padding: var(--gap-lg) var(--gap-md) var(--gap-lg) var(--gap-lg);
+        position: relative;
+        background-image: linear-gradient(
+                        to left,
+                        rgba(39, 18, 94, 0.65),
+                        rgba(255, 255, 255, 0) 100%
+        );
+        clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+        overflow: hidden;
+
+        &-text {
+            font-size: 18px;
+            font-family: 'poppins-medium', sans-serif;
+            font-weight: 500;
+            margin: 0 0 var(--gap-sm) 0;
+        }
+
+        &-form {
+            display: flex;
+            align-items: center;
+
+            .btn {
+                margin: 0 0 0 var(--gap-sm);
+            }
+        }
+    }
+
+
+    @media (max-width: 1020px) {
+        overflow: hidden;
+        min-height: 100vh;
+
+        background-size: 250%;
+
+        &-social {
+            display: none;
+
+        }
+
+        &-timer {
+            margin: 0 0 calc(20vh + var(--gap-md)) 0;
+        }
+
+        &-subscribe {
+            position: absolute;
+            width: 100%;
+            margin: 0 !important;
+            bottom: 0;
+            left: 0;
+            max-width: unset;
+            background-color: var(--dark-black-l20);
+            background-image: none;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+            transform: translateY(4%);
+
+            &-text {
+                max-width: 420px;
+                text-align: center;
+                margin: 0 auto var(--gap-lg) auto;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &-form {
+                max-width: 420px;
+                margin: 0 auto;
+            }
+        }
+
+        &-tank {
+            bottom: 18vh;
+        }
+
+        &-arena {
+            bottom: calc(20vh + 12vw);
+        }
+
+        &-city {
+            bottom: calc(20vh + 15vw);
+        }
+    }
+
+    @media (max-width: 720px) {
+        &-timer {
+            &-content {
+                &-title {
+                    font-size: 38px;
+                    line-height: 1.2em;
+                }
+
+                &-subtitle {
+                    font-size: 16px;
+                }
+            }
+
+            &-units {
+                width: 52px;
+            }
+
+            &-time {
+                &-unit {
+                    width: 42px;
+
+                    h1,
+                    &Gap {
+                        font-size: 38px;
+                        line-height: 1em;
+                        font-family: 'poppins-semiBold', sans-serif;
+                    }
+
+                    &Gap {
+                        margin: 0 12px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-family: 'poppins-regular', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 560px) {
+        &-tank img {
+            height: 40vh;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &-arena img {
+            height: 40vh;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &-city  {
+            bottom: unset;
+            top: 0;
+            img {
+                height: 60vh;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-subscribe {
+            padding: var(--gap-lg) var(--gap-sm);
+        }
+    }
+    
+    @media (max-width: 414px) {
+        &-timer {
+            &-content {
+                margin: 0 0 var(--gap-sm) 0;
+
+                &-title {
+                    font-size: 32px;
+                }
+
+                &-subtitle {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+

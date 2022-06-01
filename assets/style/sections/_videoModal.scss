@@ -1,0 +1,76 @@
+.videoModal {
+    width: 100%;
+    height: calc(640px * (9 / 16));
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(18, 8, 45, 65%);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        opacity: 0;
+        display: none;
+
+        &.active {
+            display: flex;
+            animation: videoModalOpen ease var(--transition) forwards;
+            @keyframes videoModalOpen {
+                0% {
+                    display: none;
+                    opacity: 0;
+                }
+                0.01% {
+                    display: flex;
+                }
+                100% {
+                    display: flex;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        cursor: pointer;
+        position: absolute;
+        top: var(--gap-md);
+        right: var(--gap-md);
+
+        width: 32px;
+        height: 32px;
+        background-image: url("../icons/close.svg");
+        background-size: contain;
+        background-position: center;
+    }
+
+    @media (max-width: 856px) {
+        max-width: 480px;
+        height: calc(480px * (9 / 16));
+    }
+
+    @media (max-width: 560px) {
+        max-width: 340px;
+        height: calc(340px * (9 / 16));
+    }
+
+    @media (max-width: 374px) {
+        max-width: 300px;
+        height: calc(300px * (9 / 16));
+    }
+}

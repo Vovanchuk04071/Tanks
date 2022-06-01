@@ -1,0 +1,96 @@
+.cards {
+    margin: 10vw 0 0 0;
+    position: relative;
+
+    &-bgText {
+        font-family: 'evil_empire', sans-serif;
+        color: var(--dark-white-d40);
+        font-size: 176px;
+        line-height: 1em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &-container {
+        padding: 256px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        width: calc(25% - var(--gap-sm) * 3 / 4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &:nth-child(even) {
+            margin: 16.5% 0 0 0;
+        }
+
+        &-img {
+            width: 100%;
+        }
+
+        &-title {
+            margin: 32px 0 10px 0;
+            font-family: 'evil_empire', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+
+            span {
+                color: var(--dark-blue-l20);
+                font-family: 'evil_empire', sans-serif;
+            }
+        }
+
+        &-title,
+        &-text {
+            padding: 0 var(--gap-sm);
+        }
+
+        &-text {
+            font-size: 16px;
+            font-family: 'poppins-medium', sans-serif;
+            font-weight: 500;
+        }
+    }
+  
+    @media (max-width: 826px) {
+        &-item {
+          max-width: 320px;
+          width: calc(50% - var(--gap-xs)/2);
+        }
+
+        &-container {
+          padding: var(--gap-lg) 0;
+        }
+
+        &-bgText {
+          font-size: 120px;
+          display: none;
+        }
+    }
+
+    @media (max-width: 520px) {
+        &-item {
+            &-title {
+              font-size: 24px;
+            }
+
+            &-text {
+              font-size: 14px;
+            }
+        }
+
+        &-bgText {
+          font-size: 76px;
+        }
+    }
+}

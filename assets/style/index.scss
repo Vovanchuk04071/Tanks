@@ -1,0 +1,41 @@
+@import 'assets/default', 'assets/colors', 'assets/units', 'assets/typography',
+    'assets/components';
+@import 'sections/loading', 'sections/header', 'sections/nav', 'sections/cards',
+    'sections/legend', 'sections/videoModal', 'sections/earn', 'sections/coins', 'sections/subscribe',
+    'sections/marketplace', 'sections/screen', 'sections/team', 'sections/roadmap',
+    'sections/partners', 'sections/footer';
+
+body {
+    overflow-x: hidden !important;
+
+    &.scrollBlock {
+        overflow: hidden;
+    }
+}
+
+.caution {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        font-family: 'evil_empire', sans-serif;
+    }
+}
+
+//@media (max-width: 1120px) {
+//    //.wrapper {
+//    //    display: none;
+//    //}
+//    //
+//    //.caution {
+//    //    display: flex;
+//    //}
+//    //
+//    #loading {
+//        display: none;
+//    }
+//}

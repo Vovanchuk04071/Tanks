@@ -1,0 +1,52 @@
+.screen {
+    &-container {
+        margin: var(--gap-xl) 0;
+
+        .owl-prev {
+            left: 84px;
+        }
+
+        .owl-next {
+            right: 84px;
+        }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &-title {
+        width: min-content;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: var(--dark-pink-bg);
+        font-family: 'evil_empire', sans-serif;
+        font-size: 184px;
+        line-height: 1em;
+        z-index: -1;
+    }
+
+    &-img {
+        width: 100%;
+        padding: 248px 0 0 0 !important;
+    }
+
+    @media (max-width: 768px) {
+        &-container {
+            padding: 0;
+
+            .owl-prev, .owl-next {
+                display: none !important;
+            }
+        }
+
+        &-title {
+            display: none;
+        }
+
+        &-img {
+            padding: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.subscribe {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    background-image: url('../images/subscribe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: var(--gap-xl) 0;
+    overflow: hidden;
+
+    &.update {
+        background-image: url('../images/update.png');
+        margin: -120px 0 0 0;
+        transform: translateY(50%);
+        position: relative;
+        z-index: 10;
+
+        .update-header {
+            margin: var(--gap-md) 0 0 0;
+            display: flex;
+            align-items: center;
+
+            input {
+                margin: 0 var(--gap-sm) 0 0;
+            }
+        }
+
+        .checkbox {
+            margin: var(--gap-lg) 0 0 0;
+        }
+    }
+
+    &-body {
+        padding: calc(var(--gap-xl) + 5%) calc(var(--gap-md) + 5%);
+        width: 50%;
+        margin: 0 0 0 auto;
+        background-color: var(--dark-black-bg);
+    }
+
+    &-title {
+        font-family: 'evil_empire', sans-serif;
+        font-size: 42px;
+        line-height: 1.1em;
+        font-weight: 500;
+    }
+
+    &-text {
+        margin: var(--gap-md) 0 var(--gap-sm) 0;
+        line-height: 1.75em;
+        font-family: 'poppins-medium', sans-serif;
+        font-weight: 500;
+    }
+
+    &-btnGroup {
+        display: flex;
+        align-items: center;
+
+        .btn:first-child {
+            margin: 0 var(--gap-sm) 0 0;
+        }
+    }
+    
+    @media (max-width: 994px) {
+        &-body {
+            padding: calc(var(--gap-lg) + 2%) calc(var(--gap-sm) + 2%);
+        }
+    }
+
+    @media (max-width: 820px) {
+        background-size: 300%;
+        background-position: center;
+
+        &-body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 472px) {
+        &-title {
+            font-size: 34px;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+
+        &-btnGroup {
+            flex-direction: column;
+            align-items: center;
+
+            .btn:first-child {
+                margin: 0 0 var(--gap-sm) 0;
+            }
+        }
+    }
+}

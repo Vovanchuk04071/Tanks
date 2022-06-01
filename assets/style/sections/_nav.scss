@@ -1,0 +1,110 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    &-logo {
+        width: 232px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-menu {
+        margin: 0 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &-close {
+        display: none;
+    }
+
+    &-item:not(:last-child) {
+        margin: 0 var(--gap-md) 0 0;
+    }
+
+    &-link {
+        color: var(--dark-white-main);
+    }
+
+    &-icons {
+        display: none;
+        margin: 0 0 0 auto;
+        align-items: center;
+
+        &>*:not(:last-child) {
+            margin: 0 var(--gap-xs) 0 0 ;
+        }
+    }
+
+    &-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    @media (max-width: 968px) {
+        &-menu {
+            background-color: var(--dark-black-l20);
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: calc(var(--gap-xl) + 42px) var(--gap-lg);
+            z-index: 10;
+            transition: transform ease var(--transition);
+            transform: translateX(100%);
+
+            &.active {
+                transform: translateX(0);
+            }
+        }
+
+        &-icons {
+            display: flex;
+        }
+
+        &-close {
+            display: block;
+            position: absolute;
+            top: var(--gap-sm);
+            right: var(--gap-sm);
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &-item:not(:last-child) {
+            margin: 0 0 var(--gap-md) 0 !important;
+        }
+    }
+
+    @media (max-width: 560px) {
+        &-logo {
+            width: 140px;
+        }
+    }
+}

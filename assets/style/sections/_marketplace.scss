@@ -1,0 +1,220 @@
+.marketplace {
+    width: 100%;
+    margin: var(--gap-lg) 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 48px;
+
+    &-col:nth-child(1) {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-col:nth-child(2) {
+        padding: var(--gap-lg) 0 0 0;
+        width: 100%;
+        max-width: 720px;
+        margin: 0 0 0 var(--gap-lg);
+        position: relative;
+    }
+
+    &-title {
+        font-size: 76px;
+        position: relative;
+        padding: 0 0 0 48px;
+        line-height: 1em;
+
+        &,
+        * {
+            font-family: 'evil_empire', sans-serif;
+        }
+
+        i {
+            font-style: unset;
+            color: var(--dark-blue-l20);
+        }
+
+        span {
+            width: max-content;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            color: var(--dark-white-d40);
+            font-size: 184px;
+            z-index: -1;
+            line-height: 0.85em;
+        }
+    }
+
+    &-btn {
+        margin: var(--gap-lg) 0 0 48px;
+
+        &.alt {
+            display: none;
+        }
+    }
+
+    &-text {
+        width: 100%;
+        max-width: 460px;
+        line-height: 1.75em;
+        margin: 0 0 0 auto;
+        font-family: 'poppins-medium', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &-images {
+        position: relative;
+    }
+
+    &-img {
+        width: 100%;
+        margin: var(--gap-lg) 0 0 0;
+        display: none;
+        opacity: 0;
+
+        &.active {
+            display: block;
+
+            animation: image ease 1s forwards;
+
+            @keyframes image {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-slider-btn {
+        width: 64px;
+        height: 64px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+
+        &.prev {
+            left: 0;
+            background-image: url("../images/arrow-prev.svg");
+        }
+
+        &.next {
+            right: 0;
+            background-image: url("../images/arrow-next.svg");
+        }
+    }
+
+    @media (max-width: 836px) {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-col {
+            width: 100%;
+            max-width: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        &-slider-btn {
+            top: 100%;
+        }
+
+        &-title {
+            padding: 0;
+
+            br {
+                display: none;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            margin: 0;
+            max-width: unset;
+        }
+
+        &-btn {
+            display: none;
+            margin: var(--gap-md) 0 0 0;
+
+            &.alt {
+                display: flex;
+                margin: var(--gap-lg) 0 0 0;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &-title {
+            font-size: 58px;
+        }
+    }
+    
+    @media (max-width: 560px) {
+        &-title {
+            font-size: 34px;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+    }
+}
+
+.owl-carousel {
+    position: relative;
+
+    .owl-prev {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: -54px;
+        transform: translateY(-50%);
+        width: 74px;
+        height: 74px;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-image: url("../images/arrow-prev.svg") !important;
+
+        span {
+            display: none;
+        }
+    }
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        right: -54px;
+        transform: translateY(-50%);
+        width: 74px;
+        height: 74px;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-image: url("../images/arrow-next.svg") !important;
+
+        span {
+            display: none;
+        }
+    }
+}

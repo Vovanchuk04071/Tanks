@@ -1,0 +1,91 @@
+.coins {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 280px 0 0 0;
+    margin: -140px 0 0 0;
+
+    &-bgText {
+        font-family: 'evil_empire', sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 182px;
+        line-height: 1em;
+        color: var(--dark-pink-bg);
+        z-index: -2;
+    }
+
+    &-card {
+        width: calc(48% - var(--gap-md));
+
+        &-img {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                font-family: 'evil_empire', sans-serif;
+                font-size: 48px;
+            }
+
+            img {
+                margin: 0 0 0 -36px;
+                width: 180px;
+                z-index: -1;
+            }
+        }
+
+        &-text {
+            font-family: 'poppins-medium', sans-serif;
+            font-weight: 500;
+            margin: var(--gap-sm) 0 0 0;
+            line-height: 1.75em;
+        }
+    }
+
+    @media (max-width: 724px) {
+        flex-direction: column;
+        align-items: center;
+
+        &-card {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 360px;
+
+            &-img {
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin: var(--gap-sm) 0 0 0;
+                }
+            }
+
+            &:not(:last-child) {
+                margin: 0 0 var(--gap-md) 0;
+            }
+        }
+
+        &-bgText {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 560px) {
+        &-card {
+            &-img {
+                img {
+                    width: 140px;
+                }
+            }
+
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "prettier": "^2.6.2"
+  }
+}

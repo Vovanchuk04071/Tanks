@@ -1,0 +1,104 @@
+.footer {
+    background-color: var(--dark-black-main);
+    padding: calc(var(--gap-xl) * 4) 0 var(--gap-lg) 0;
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+
+    &-body {
+        display: flex;
+        align-items: center;
+    }
+
+    &-logo {
+        width: 180px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+
+        &-item:not(:last-child) {
+            margin: 0 var(--gap-md) 0 0;
+        }
+
+        &-link {
+            color: var(--dark-white-main);
+            font-family: 'poppins-medium', sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    &-links {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: var(--gap-md) 0 var(--gap-sm) 0;
+    }
+
+    &-text {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        color: var(--dark-white-main);
+        line-height: 24px;
+        text-align: center;
+        margin: var(--gap-xs) 0 0;
+    }
+
+    &-link {
+        width: 24px;
+        height: 34px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &:not(:last-child) {
+            margin: 0 var(--gap-sm) 0 0;
+        }
+    }
+    
+    @media (max-width: 968px) {
+        &-logo {
+            display: none;
+        }
+
+        &-menu {
+            margin: 0 auto;
+        }
+    }
+    
+    @media (max-width: 826px) {
+        &-body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-links {
+            display: flex;
+        }
+
+        &-text {
+            display: block;
+            font-size: 14px;
+        }
+
+        &-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-item:not(:last-child) {
+                margin: 0 0 var(--gap-sm) 0;
+            }
+        }
+    }
+}

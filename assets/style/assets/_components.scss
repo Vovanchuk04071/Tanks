@@ -1,0 +1,118 @@
+.container {
+    width: 100%;
+    max-width: calc(1120px + var(--gap-sm) * 2);
+    margin: 0 auto;
+    padding: 0 var(--gap-sm);
+}
+
+.btn {
+    min-height: 42px;
+    min-width: 120px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins-medium', sans-serif;
+    padding: 0 1.35em;
+    border-radius: 42px;
+    color: var(--dark-white-main);
+    background-color: var(--dark-blue-main);
+
+    &.outline {
+        background-color: transparent;
+        border: 0.125em solid;
+
+        &.pink {
+            color: var(--dark-white-main);
+            border-color: var(--dark-pink-main);
+        }
+    }
+}
+
+.icon {
+    &.medium {
+        mask: url('../icons/medium.svg');
+    }
+
+    &.linkedin {
+        mask: url('../icons/linkedin.svg');
+    }
+
+    &.twitter {
+        mask: url('../icons/twitter.svg');
+    }
+
+    &.discord {
+        mask: url('../icons/discord.svg');
+    }
+
+    &.telegram {
+        mask: url('../icons/telegram.svg');
+    }
+
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    mask-position: center !important;
+    mask-repeat: no-repeat !important;
+    mask-size: contain !important;
+    background-color: var(--dark-white-main);
+}
+
+.input {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 1.65em;
+    border-radius: 42px;
+    color: var(--dark-white-main);
+    background-color: var(--dark-black-l20);
+    border: 0.125em solid var(--dark-black-l40);
+    font-family: 'poppins-medium', sans-serif;
+    font-weight: 500;
+
+    &::placeholder {
+        color: var(--dark-white-d20);
+    }
+}
+
+.checkbox {
+    label {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-custom {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background-color: var(--dark-black-l20);
+        border: 2px solid var(--dark-black-l40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0;
+        }
+
+        &.checked {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-label {
+        width: calc(100% - 16px - var(--gap-sm));
+        text-align: left;
+    }
+
+    input {
+        display: none;
+    }
+}
